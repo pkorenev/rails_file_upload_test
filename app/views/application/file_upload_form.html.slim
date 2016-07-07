@@ -1,0 +1,6 @@
+= simple_form_for @log, url: test_file_upload_path do |f|
+  div
+    |attachment exists: #{@log.attachment.exists?.inspect}
+
+  = f.input :attachment, as: :file, input_html: { name: "filename" }
+  = f.button :submit
